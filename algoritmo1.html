@@ -536,13 +536,42 @@
         }
         remove([2,4,6,8,10],2,4);
 
+        /*Algoritmo V*/
 
+        function reset(ar){
+            for(var i=0; i<ar.length;i++){
+                if(Math.sign(ar[i])==-1){
+                    ar[i]=0;
+                }
+            }
+            console.log(ar);
+        }
+
+        reset([-2,1,0,8,-16]);
+
+        function move(ar){
+            ar.shift();
+
+            ar.push(0);
+            console.log(ar);
+        }
+        move([1,2,3]);
 
         function reverse (ar){
             ar.reverse();
             console.log(ar);
         }
         reverse([2,4,9,10]);
+
+        function repeat(ar){
+            var ar1=[];
+            for (var i=0; i<ar.length;i++ ){
+                    ar1.push(ar[i]); 
+                    ar1.push(ar[i]);
+            }
+            console.log(ar1);
+        }
+        repeat([1,2,3]);
     
     </script>
     
