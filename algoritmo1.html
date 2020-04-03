@@ -463,14 +463,14 @@
 
         function oddArray(x){
             var impar=[];
-            for (var i=0; i<x.length;i++){
-                if(x[i]%2!=0){
-                    impar.push(x[i]);
+            for (var i=1; i<=x;i++){
+                if(i%2!=0){
+                    impar.push(i);
                 }
             }
             return impar;
         }
-        y= oddArray([2,11,4,6,3]);
+        y= oddArray(255);
         console.log(y);
 
         function squareValue(x){
@@ -487,6 +487,54 @@
         y=squareValue([2,5,8]);
         console.log(y);
 
+        /*Algoritmo IV*/
+
+        function comparar(ar,x){
+            var count=0;
+            for(var i=0; i<ar.length;i++){
+                if(ar[i]>x){
+                    count++
+                }
+            }
+            console.log(count);
+        }
+        comparar([5,2,3],2);
+
+        function maxMinProm(ar){
+            var max=Math.max(...ar);
+            console.log(max);
+
+            var min=Math.min(...ar);
+            console.log(min);
+
+            sum=0;
+            prom=0;
+            for(var i=0; i<ar.length;i++){
+                sum=sum+ar[i];
+            }
+            prom= sum/ar.length;
+            return prom;  
+        }
+
+        maxMinProm([2,4,7]);
+
+        function reemplazar(ar){
+            for(var i=0; i<ar.length;i++){
+                if(Math.sign(ar[i])==-1){
+                    ar[i]="dojo";
+                }
+            }
+            console.log(ar);
+        }
+        reemplazar([2,-1,0,7,-2]);
+
+        function remove(ar,x,y){
+            for(var i=0; i<ar.length;i++){
+                ar.splice(x,y);
+            }  
+            console.log(ar);
+        }
+        remove([2,4,6,8,10],2,4);
 
 
 
