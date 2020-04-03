@@ -360,6 +360,8 @@
 
         input output
         2,2    [2,2,5]
+        2,2    [2,2,5]
+        6,8    [6,8,5]
         6,8    [6,8,5]
 
 
@@ -376,8 +378,7 @@
         console.log(y);
 
         input output
-        2      [2,2]
-        5      [2,2,5]
+        2,5   [2,2,5]
 
         function a(x){
             if(x[0]<x[1]){
@@ -402,7 +403,7 @@
             }
             return x;
         }  
-        console.log(a[1,2,3,4]);
+        console.log(a([1,2,3,4]));
 
         input     output
         [1,2,3,4] [coding,coding,coding,coding]
@@ -418,7 +419,7 @@
             }
             return x;
         }
-        console.log(a[5,7,-1,4]);
+        console.log(a([5,7,-1,4]));
 
         input       output
         [5,7,-1,4]   [5,coding,dojo,4]
@@ -443,7 +444,7 @@
             }
             return sum;
         }
-        no imprime, porque no se llama la fx
+        undefined, porque no se llama la fx
 
         function printAverage(x){
             var sum=0;
@@ -462,14 +463,14 @@
 
         function oddArray(x){
             var impar=[];
-            for (var i=0; i<=x;i++){
-                if(i%2==0){
+            for (var i=0; i<x.length;i++){
+                if(x[i]%2!=0){
                     impar.push(x[i]);
                 }
             }
             return impar;
         }
-        y=return oddArray();
+        y= oddArray([2,11,4,6,3]);
         console.log(y);
 
         function squareValue(x){
@@ -486,7 +487,7 @@
         y=squareValue([2,5,8]);
         console.log(y);
 
-        
+
 
 
         function reverse (ar){
