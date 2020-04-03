@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Algoritmo 1</title>
+    <title>Algoritmos</title>
 </head>
 <body>
     <script>
@@ -93,6 +93,29 @@
         a=15          15
         a=10          10
         b=10          10 
+
+        /*Algoritmo II*/
+        
+        function printUpTo(x){
+            if (x>0){
+                for (var i=1; i<=x; i++){
+                    console.log(i);
+                    }
+            }
+            else{
+                return false;
+                }
+            }
+        printUpTo(1000);
+        y = printUpTo(-10);
+        console.log(y);
+
+
+        function reverse (ar){
+            ar.reverse();
+            console.log(ar);
+        }
+        reverse([2,4,9,10]);
     
     </script>
     
